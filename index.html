@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=2,maximum-scale=1,user-scalable=no">
+    <title>我的主页</title>
+    <link type="text/css" rel="stylesheet" href="css/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="css/reset.css">
+    <link type="text/css" rel="stylesheet" href="css/common.css">
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+</head>
+<body>
+ <div class="wrap">
+     <div class="banner music">
+          <audio id="music" loop >
+              <source src="musics/music-cat.mp3">
+          </audio>
+         <div class="icon" id="play">
+             <i class="fa fa-play"></i>
+         </div>
+         <div class="icon play" id="stop">
+             <i class="fa fa-stop"></i>
+         </div>
+      </div>
+
+  </div>
+ <script type="text/javascript">
+   var mymusic=document.getElementById("music");
+   var mymusics=document.getElementsByClassName("music")[0];
+   var play=document.getElementById("play");
+
+   var pause=document.getElementById("stop");
+
+    play.onclick=function(){
+        pause.style.display="block"
+        play.style.display="none"
+        mymusics.id="stops"
+         mymusic.play()
+     }
+   pause.onclick=function(){
+       play.style.display="block"
+       pause.style.display="none"
+       mymusics.id=""
+       mymusic.pause()
+
+
+   }
+ </script>
+
+</body>
+</html>
